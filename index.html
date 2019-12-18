@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title></title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Coffee Project</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!--    our stylesheet-->
     <link rel="stylesheet" href="style.css">
+
 </head>
+
+
 <body>
+
+<!--coffee title-->
+<div class="jumbotron text-center">
     <h1>Coffee!</h1>
+</div>
 
-    <form>
-        <label for="roast-selection"></label>
-        <select id="roast-selection">
-            <option>light</option>
-            <option>medium</option>
-            <option>dark</option>
-        </select>
-        <input id="submit" type="submit" />
-    </form>
+<!--container head-->
+<div class="container">
+    <div class="row">
 
-    <table>
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>NAME</th>
-                <th>ROAST</th>
-            </tr>
-        </thead>
-        <tbody id="coffees"></tbody>
-    </table>
+        <!--left side-->
+        <div class="coffee-names col-md-6">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>ROAST</th>
+                </tr>
+                </thead>
+                <tbody id="coffees"></tbody>
+            </table>
+        </div>
 
-    <script src="main.js"></script>
+        <!--right side-->
+        <div class="coffee-search col-md-6">
+            <form>
+                <label for="roast-selection"></label>
+
+                <!--                option dropdown-->
+                <h4>roast</h4>
+                <select class="form-control" id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+
+                <!--                option input-->
+                <h4>coffee name</h4>
+                <input class="form-control" type="text" placeholder="Coffee Name">
+
+                <!--                submit button-->
+                <input class="btn btn-primary btn-block" id="submit" type="submit"/>
+
+                <hr>
+
+                <!--                add a coffee-->
+                <h1>add a coffee</h1>
+
+                <!--                option dropdown-->
+                <h4>roast</h4>
+                <select class="form-control" id="roast-selection">
+                    <option>light</option>
+                    <option>medium</option>
+                    <option>dark</option>
+                </select>
+
+                <!--                option input-->
+                <h4>name</h4>
+                <input class="form-control" type="text" placeholder="Coffee Name">
+
+                <!--                submit button-->
+                <input class="btn btn-primary btn-block" id="submit" type="submit"/>
+
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<!-- Optional JavaScript -->
+<script src="main.js"></script>
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 </body>
 </html>
