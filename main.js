@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<div class="d-flex align-items-baseline ard-body">';
+    html += '<div class="d-flex align-items-baseline">';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p class="ml-3 text-secondary">' + coffee.roast + '</p>';
     html += '</div>';
