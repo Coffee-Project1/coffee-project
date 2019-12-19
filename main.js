@@ -2,7 +2,7 @@
 
 function renderCoffee(coffee) {
     var html = '<div class="coffee">';
-    html += '<div class="d-flex align-items-baseline">';
+    html += '<div class="d-flex align-items-baseline ard-body">';
     html += '<h3>' + coffee.name + '</h3>';
     html += '<p class="ml-3 text-secondary">' + coffee.roast + '</p>';
     html += '</div>';
@@ -65,7 +65,7 @@ var coffeeSearch = document.getElementById('coffeeSearch');
 var backSpace = "";
 
 
-function coffeeAdd() {
+function coffeePlus() {
     var coffee = {id: 0, name: 'Coffee Name', roast: 'light'};
     coffee.name = coffeeName.value;
     coffee.roast = newRoast.value;
@@ -75,10 +75,10 @@ function coffeeAdd() {
 }
 
 
-function coffeeFind(e) {
+function coffeeFinder(e) {
     backSpace += e.key.toLowerCase();
     var filteredCoffees = [];
-    console.log(e.key);
+
     coffees.forEach(function (coffee) {
         if (coffee.name.toLowerCase().startsWith(backSpace)) {
             filteredCoffees.push(coffee)
@@ -88,7 +88,7 @@ function coffeeFind(e) {
 
 }
 
-coffeeSearch.addEventListener("keypress", coffeeFind);
+coffeeSearch.addEventListener("keypress", coffeeFinder);
 
 coffeeSearch.addEventListener('keyup', function (e) {
     if (e.key === 'Backspace') {
@@ -96,7 +96,7 @@ coffeeSearch.addEventListener('keyup', function (e) {
         backSpace.pop();
         backSpace = backSpace.join('');
         if (backSpace === '') {
-            tbody.innerHTML = renderCoffees(coffees);
+            // tbody.innerHTML = renderCoffees(coffees);
         }
     }
 });
@@ -105,4 +105,4 @@ coffeeSearch.addEventListener('keyup', function (e) {
 tbody.innerHTML = renderCoffees(coffees);
 
 submitButton.addEventListener('click', updateCoffees);
-coffeeSubmit.addEventListener('click', coffeeAdd);
+coffeeSubmit.addEventListener('click', coffeePlus);
