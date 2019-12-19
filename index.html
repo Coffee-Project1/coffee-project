@@ -17,70 +17,70 @@
 
 
 <body>
-
-<!--coffee title-->
-<div class="jumbotron text-center">
-    <h1>Coffee!</h1>
-</div>
-
 <!--container head-->
 <div class="container">
+
+<!--coffee title-->
+<div class="jumbotron jumbotron-fluid text-center" id="main-jumbotron">
+    <div id="jumbotron-container">
+        <h1>Coffee!</h1>
+    </div>
+</div>
+
+<!--~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
     <div class="row">
 
         <!--left side-->
-        <div class="coffee-names col-md-6">
-            <table>
-                <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>NAME</th>
-                    <th>ROAST</th>
-                </tr>
-                </thead>
-                <tbody id="coffees"></tbody>
-            </table>
+        <div class="coffee-names col-6">
+            <div id="tbody"></div>
         </div>
 
         <!--right side-->
-        <div class="coffee-search col-md-6">
+        <div class="coffee-search col-6">
             <form>
                 <label for="roast-selection"></label>
 
                 <!--                option dropdown-->
-                <h4>roast</h4>
+                <h4>search roast</h4>
                 <select class="form-control" id="roast-selection">
+                    <option>all</option>
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
 
-                <!--                option input-->
-                <h4>coffee name</h4>
-                <input class="form-control" type="text" placeholder="Coffee Name">
+                <!--                coffee name-->
+                <h4>search coffee name</h4>
+                <input class="form-control" type="text" name="newCoffeeName" id="coffeeSearch"
+                       placeholder="Coffee Name">
 
-                <!--                submit button-->
-                <input class="btn btn-primary btn-block" id="submit" type="submit"/>
+                <!--                search button-->
+                <br>
+
+                <button type="button" class="btn btn-primary btn-block" id="submit">Search by Roast</button>
 
                 <hr>
 
                 <!--                add a coffee-->
                 <h1>add a coffee</h1>
 
-                <!--                option dropdown-->
-                <h4>roast</h4>
-                <select class="form-control" id="roast-selection">
+                <!--                add dropdown-->
+                <h4>new coffee roast</h4>
+                <select class="form-control" id="new-roast-selection">
+
                     <option>light</option>
                     <option>medium</option>
                     <option>dark</option>
                 </select>
 
-                <!--                option input-->
-                <h4>name</h4>
-                <input class="form-control" type="text" placeholder="Coffee Name">
+                <!--                add input-->
+                <h4>new coffee name</h4>
+                <input class="form-control" type="text" name="newCoffeeName" id="newCoffeeName"
+                       placeholder="Enter New Coffee">
 
                 <!--                submit button-->
-                <input class="btn btn-primary btn-block" id="submit" type="submit"/>
-
+                <br>
+                <button type="button" class="btn btn-primary btn-block" id="newSubmit">Add New Coffee</button>
 
             </form>
         </div>
