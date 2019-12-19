@@ -4,16 +4,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-.jumbotron{
+.jumbotron {
     background-image: url("coffeebeans.jpg");
     background-size: cover;
     background-position: center;
     margin-top: 10px;
 }
 
-#jumbotron-container{
+#jumbotron-container {
     color: black;
     text-align: center;
     background-color: white;
-    opacity:0.6;
+    opacity: 0.6;
 }
