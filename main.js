@@ -96,7 +96,7 @@ coffeeSearch.addEventListener('keyup', function (e) {
         backSpace.pop();
         backSpace = backSpace.join('');
         if (backSpace === '') {
-            // tbody.innerHTML = renderCoffees(coffees);
+            tbody.innerHTML = renderCoffees(coffees);
         }
     }
 });
