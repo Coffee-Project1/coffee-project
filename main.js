@@ -4,13 +4,14 @@ function renderCoffee(coffee) {
     var html = '<div class="coffee">';
     html += '<div class="d-flex align-items-baseline">';
     html += '<h3>' + coffee.name + '</h3>';
-    html += '<p class="ml-3 text-secondary">' + coffee.roast + '</p>';
+    html += '<p class="ml-3">' + coffee.roast + '</p>';
     html += '</div>';
     html += '</div>';
 
     return html;
 }
 
+// left from original coding
 function renderCoffees(coffees) {
     var html = '';
     for (var i = 0; i < coffees.length; i++) {
@@ -19,6 +20,7 @@ function renderCoffees(coffees) {
     return html;
 }
 
+// updated to show all coffees when "all" is selected
 function updateCoffees(e) {
     e.preventDefault(); // don't submit the form, we just want to update the data
     var selectedRoast = roastSelection.value;
@@ -63,7 +65,7 @@ var coffeeName = document.querySelector('#newCoffeeName');
 var coffeeSearch = document.getElementById('coffeeSearch');
 var backSpace = "";
 
-
+// adds coffee
 function coffeePlus() {
     var coffee = {id: 0, name: 'Coffee Name', roast: 'light'};
     coffee.name = coffeeName.value;
@@ -73,7 +75,7 @@ function coffeePlus() {
 
 }
 
-
+// coffee search with typed input
 function coffeeFinder(e) {
     backSpace += e.key.toLowerCase();
     var filteredCoffees = [];
@@ -86,9 +88,11 @@ function coffeeFinder(e) {
     })
 
 }
-
+// keypress adds to the list
 coffeeSearch.addEventListener("keypress", coffeeFinder);
 
+
+// allows to backspace and refresh
 coffeeSearch.addEventListener('keyup', function (e) {
     if (e.key === 'Backspace') {
         backSpace = backSpace.split('');

@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    background-color: #885737;
 }
 
 .jumbotron {
@@ -16,4 +17,16 @@ body {
     text-align: center;
     background-color: white;
     opacity: 0.6;
+}
+
+.coffee-search {
+    background-color: #D5B876;
+}
+
+.coffee-names {
+    background-color: #C69876;
+}
+
+p {
+    color: white;
 }
